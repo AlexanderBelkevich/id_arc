@@ -8,7 +8,7 @@ function menu() {
     link.addEventListener("click", function (e) {
       e.preventDefault();
       if (window.screen.width <= 1024) {
-        menu.style.display = "none";
+        toggleMobileMenu();
       }
 
       const targetId = this.getAttribute("href").substring(1);
