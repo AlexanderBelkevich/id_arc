@@ -7,7 +7,10 @@ function menu() {
   menuLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
-      menu.style.display = "none";
+      if (window.screen.width <= 1024) {
+        menu.style.display = "none";
+      }
+
       const targetId = this.getAttribute("href").substring(1);
       const targetSection = document.getElementById(targetId);
 
@@ -39,23 +42,29 @@ function menu() {
 }
 
 function toggleMobileMenu() {
+  const header = document.querySelector(".header-mobile");
+  const links = document.querySelector(".header-mobile-menu");
   const menu = document.querySelector(".header-menu");
   if (menu.style.display === "block") {
     menu.style.display = "none";
+    links.style.display = "none";
+    header.classList.remove("header-mobile--opened");
   } else {
     menu.style.display = "block";
+    links.style.display = "block";
+    header.classList.add("header-mobile--opened");
   }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const mobileMenuToggleBurger = document.querySelector(".header-menu__burger");
+  const mobileMenuToggleBurger = document.querySelector(".header-burger");
 
   let map;
   let center = new google.maps.LatLng(46.351751, 48.043511);
 
   let ico = {
-    url: "http://new.idarchitects.ru/img/ico_map_marker.png",
-    size: new google.maps.Size(49, 67),
+    url: "http://idarchitects.ru/pin.svg",
+    size: new google.maps.Size(95, 111),
     anchor: new google.maps.Point(24, 67),
   };
 
@@ -86,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const swiperGallery = new Swiper(".swiper-container-gallery1", {
     loop: false,
     slidesPerView: 1,
-    spaceBetween: 25,
+    spaceBetween: 10,
     navigation: {
       nextEl: ".gallery-slider1-next",
       prevEl: ".gallery-slider1-prev",
@@ -108,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const swiperGallery2 = new Swiper(".swiper-container-gallery2", {
     loop: false,
     slidesPerView: 1,
-    spaceBetween: 25,
+    spaceBetween: 10,
     navigation: {
       nextEl: ".gallery-slider2-next",
       prevEl: ".gallery-slider2-prev",
