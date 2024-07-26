@@ -23,7 +23,8 @@ img {
   padding: 0;
   text-transform: uppercase;
   margin-bottom: 20px;
-  font-family: var(--museo-b);
+  font-family: var(--museo);
+  font-weight: 500;
 }
 
 .title.white {
@@ -744,4 +745,149 @@ img {
   @media screen and (max-width: 767px) {
     order: 2;
   }
+}
+
+.page {
+  background: #f4f4f4;
+  padding-bottom: 40px;
+  @media screen and (max-width: 1024px) {
+    padding-bottom: 10px;
+    padding-top: 110px;
+  }
+}
+
+.page-top {
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media screen and (max-width: 1024px) {
+    padding-top: 10px;
+    padding-bottom: 30px;
+    flex-wrap: wrap;
+  }
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
+}
+
+.page-top-back {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+  font-size: 20px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-family: var(--museo);
+  @media screen and (max-width: 767px) {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+}
+
+.page-top-filter {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  font-size: 20px;
+  @media screen and (max-width: 767px) {
+    justify-content: center;
+  }
+}
+
+.page-top-filter__link {
+  text-decoration: none;
+  color: #000;
+  font-family: var(--museo-250);
+  text-transform: uppercase;
+}
+
+.page-top-filter__link.active {
+  font-weight: 500;
+  font-family: var(--museo);
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width: 767px) {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+.projects-element {
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+}
+
+.projects-element__img {
+  width: 100%;
+  height: 267px;
+  object-fit: cover;
+  display: block;
+}
+
+.projects-element-bottom {
+  padding: 40px 20px;
+}
+
+.projects-element-bottom__name {
+  display: block;
+  font-weight: 500;
+  font-family: var(--museo);
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.projects-element-bottom__year {
+  display: block;
+  color: rgba(0, 0, 0, 0.66);
+  font-size: 15px;
+}
+
+.pagination {
+  display: flex;
+  gap: 5px;
+  margin-top: 40px;
+  @media screen and (max-width: 767px) {
+    margin-top: 20px;
+  }
+}
+
+.pagination-element {
+  display: flex;
+  width: 55px;
+  height: 55px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-family: var(--museo);
+  font-size: 20px;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  transition: 0.2s;
+  @media screen and (max-width: 767px) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.pagination-element:hover {
+  color: #fff;
+  background: #000;
+}
+
+.pagination-element.active {
+  background: #000;
+  color: #fff;
 }
