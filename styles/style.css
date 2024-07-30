@@ -160,7 +160,7 @@ img {
 .header {
   position: sticky;
   top: 0;
-  z-index: 10000;
+  z-index: 100;
   background: #fff;
   @media screen and (max-width: 1024px) {
     display: none;
@@ -890,4 +890,98 @@ img {
 .pagination-element.active {
   background: #000;
   color: #fff;
+}
+
+.page-top-info {
+  text-align: right;
+  @media screen and (max-width: 767px) {
+    text-align: left;
+  }
+}
+
+.page-top-info__name {
+  display: block;
+  font-size: 30px;
+  font-weight: 500;
+  font-family: var(--museo);
+  margin-bottom: 5px;
+}
+
+.page-top-info__year {
+  display: block;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.66);
+}
+
+.project-description {
+  border: 1px dashed rgba(83, 83, 83, 0.5);
+  padding: 30px;
+  margin-bottom: 64px;
+  font-size: 18px;
+  line-height: 25px;
+  @media screen and (max-width: 767px) {
+    padding: 0;
+    border: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.project-title {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: var(--museo);
+}
+
+.project-photos {
+  display: grid;
+  gap: 3px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 20px;
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width: 767px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.project-photos a {
+  display: block;
+}
+
+.project-photos a img {
+  height: 323px;
+  object-fit: cover;
+  display: block;
+  @media screen and (max-width: 767px) {
+    height: 298px;
+  }
+}
+
+#panorama {
+  width: 100%;
+  height: 600px;
+  margin-bottom: 3px;
+  @media screen and (max-width: 767px) {
+    height: 400px;
+  }
+}
+
+.panorama-list {
+  display: flex;
+  gap: 3px;
+  flex-wrap: wrap;
+}
+
+.panorama-list__element {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  cursor: pointer;
+  @media screen and (max-width: 767px) {
+    width: 115px;
+    height: 115px;
+  }
 }

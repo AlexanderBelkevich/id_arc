@@ -72,6 +72,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   mobileMenuToggleBurger.addEventListener("click", toggleMobileMenu);
 
+  Fancybox.bind("[data-fancybox]", {
+    // Your custom options
+  });
+
   const swiper = new Swiper(".swiper-container", {
     loop: true,
     pagination: {
