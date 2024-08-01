@@ -651,7 +651,7 @@ img {
 .footer-content {
   display: grid;
   grid-template-columns: minmax(150px, 313px) 1fr 91px;
-  gap: 28px;
+  gap: 38px;
   @media screen and (max-width: 1024px) {
     display: flex;
     flex-wrap: wrap;
@@ -672,7 +672,7 @@ img {
   font-size: 15px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 30px;
+  column-gap: 40px;
   row-gap: 16px;
   align-items: center;
   @media screen and (max-width: 767px) {
