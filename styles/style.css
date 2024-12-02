@@ -626,8 +626,8 @@ img {
 
 .team {
   background: #201f1f;
-  padding: 162px 0 92px 0;
-  margin-top: -102px;
+  padding: 182px 0 92px 0;
+  margin-top: -123px;
   @media screen and (max-width: 767px) {
     margin: 0;
     padding: 50px 0;
