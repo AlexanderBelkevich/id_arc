@@ -508,7 +508,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 35px 40px 13px 40px;
+  padding: 35px 40px 33px 40px;
   @media screen and (max-width: 767px) {
     display: block;
     padding: 30px 10px 10px 10px;
@@ -541,9 +541,9 @@ img {
 .gallery-slider-next {
   transform: rotate(180deg);
   position: absolute;
-  bottom: 132px;
+  bottom: 152px;
   z-index: 1;
-  right: -27.5px;
+  right: -20px;
   @media screen and (max-width: 1279px) {
     right: 0;
   }
@@ -567,9 +567,9 @@ img {
 
 .gallery-slider-prev {
   position: absolute;
-  bottom: 132px;
+  bottom: 152px;
   z-index: 1;
-  left: -27.5px;
+  left: -20px;
   @media screen and (max-width: 1279px) {
     left: 0;
   }
