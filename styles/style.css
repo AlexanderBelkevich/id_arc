@@ -415,6 +415,10 @@ img {
     display: none;
   }
 }
+
+.services-list.mobile {
+  display: none;
+}
 @media screen and (max-width: 767px) {
   .services-list.mobile {
     display: grid;
